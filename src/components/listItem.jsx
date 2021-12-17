@@ -1,5 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 function ListItem(props) {
-  return <li>{props.name}</li>;
+  return (
+    <li
+      onClick={() => {
+        props.onChecked(props.id);
+      }}
+    >
+      {props.name}
+    </li>
+  );
 }
 export default ListItem;
